@@ -9,27 +9,14 @@ defmodule BlockScoutWeb.LayoutView do
 
   @default_other_networks [
     %{
-      title: "POA",
-      url: "https://blockscout.com/poa/core"
-    },
-    %{
-      title: "Sokol",
-      url: "https://blockscout.com/poa/sokol",
+      title: "EVM Makima Explorer",
+      url: "https://explorer-makima.sxlmnwb.xyz",
       test_net?: true
     },
     %{
-      title: "Gnosis Chain",
-      url: "https://blockscout.com/xdai/mainnet"
-    },
-    %{
-      title: "Ethereum Classic",
-      url: "https://blockscout.com/etc/mainnet",
-      other?: true
-    },
-    %{
-      title: "RSK",
-      url: "https://blockscout.com/rsk/mainnet",
-      other?: true
+      title: "Cosmos Makima Explorer",
+      url: "https://explorer.nodexcapital.com/makima",
+      test_net?: true
     }
   ]
 
@@ -65,7 +52,7 @@ defmodule BlockScoutWeb.LayoutView do
 
   def issue_link(conn) do
     params = [
-      labels: "BlockScout",
+      labels: "Makima RollApp",
       body: issue_body(conn),
       title: subnetwork_title() <> ": <Issue Title>"
     ]
